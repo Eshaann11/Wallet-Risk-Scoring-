@@ -1,0 +1,30 @@
+📘 Documentation Summary
+Data Collection: Simulated wallet-level lending activity using mock data. In production, fetch real data from Compound’s subgraph or Debank.
+
+Feature Selection Rationale:
+
+Behavioral: borrows, repayments, repayment ratio
+
+Risk: liquidation events
+
+Collateral quality: max collateral, avg ratio
+
+Activity: time-based usage patterns
+
+Scoring Logic:
+
+Min-max normalized features
+
+Weighted composite: behavior (50%), collateral (50%)
+
+Final scaled score: bounded 0–1000
+
+Outlier wallets penalized
+
+Justification of Risk Indicators:
+
+Wallets with missed repayments, repeated liquidations, or poor collateral management tend to pose higher lending risk
+
+Time-variant behaviors help spot dormant or inconsistent actors
+
+Isolation Forest used to discount outlier scoring profiles

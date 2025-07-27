@@ -23,3 +23,9 @@ Using wallet addresses as input, the pipeline:
 ├── score_pipeline.py           # Main scoring script
 ├── wallet_risk_scores.csv      # Output file with wallet_id and score
 └── README.md                   # Documentation and setup guide
+
+📊 Sample Output
+wallet_id	                                 score
+0xfaa0768bde629806739c3a4620656c5d26f44ef2	732
+0xabc1234567890abcdef1234567890abcdef1234	412
+...	...
